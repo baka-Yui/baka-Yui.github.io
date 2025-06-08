@@ -5,10 +5,10 @@ window.addEventListener("DOMContentLoaded", function () {
     canvas.width = 300;
     canvas.height = 400;
     canvas.style.position = "fixed";
-    canvas.style.bottom = "0";
-    canvas.style.right = "0";
+    canvas.style.bottom = "-60px";
+    canvas.style.left = "0";
     canvas.style.zIndex = "9999";
-    canvas.style.pointerEvents = "auto"; // 允许鼠标事件
+    canvas.style.pointerEvents = "auto";
     document.body.appendChild(canvas);
 
     var script = document.createElement("script");
@@ -16,17 +16,15 @@ window.addEventListener("DOMContentLoaded", function () {
     script.onload = function () {
         loadlive2d("live2d", "/Pio/model.json");
 
-        // 显示气泡的函数，传入文字内容和显示时长
         function showBubble(text, duration = 5000) {
-            // 如果已有气泡，先删除
             var existing = document.getElementById("live2d-bubble");
             if (existing) existing.remove();
 
             var bubble = document.createElement("div");
             bubble.id = "live2d-bubble";
             bubble.style.position = "fixed";
-            bubble.style.bottom = "270px"; // 靠近看板娘
-            bubble.style.right = "10px";
+            bubble.style.bottom = "210px";
+            bubble.style.left = "10px";
             bubble.style.maxWidth = "220px";
             bubble.style.padding = "8px 12px";
             bubble.style.backgroundColor = "transparent";
@@ -55,19 +53,41 @@ window.addEventListener("DOMContentLoaded", function () {
             }, duration);
         }
 
-        // 页面加载后 500ms 显示欢迎语
         setTimeout(() => {
             showBubble("欢迎来到我的网站！有什么需要帮忙的吗？");
         }, 500);
 
-        // 30秒后，如果没显示其他气泡，再自动打招呼
         setTimeout(() => {
             showBubble("你已经在这里待了好久了，要不要站起来喝口水？", 7000);
         }, 600000);
 
-        // 点击 canvas 时触发互动台词
+        // 点击计数与随机文案
+        let clickCount = 0;
+        // 随机台词列表
+        const randomReplies = [
+            "哎呀，不要戳我啦！",
+            "哼，别烦我！",
+            "再戳我可要生气了！",
+            "你真有耐心啊~",
+            "停下啦，疼呢！",
+            "我在这里，不用一直戳啦！",
+            "嘿，你喜欢我吗？",
+            "别戳我啦，我会害羞的！"
+        ];
+        // 随机在3~10次之间触发一句话
+        let triggerThreshold = Math.floor(Math.random() * 8) + 3; // 3~10
+
         canvas.addEventListener("click", function () {
-            showBubble("哎呀，不要戳我啦！");
+            clickCount++;
+            if (clickCount >= triggerThreshold) {
+                // 随机选一句回复
+                const idx = Math.floor(Math.random() * randomReplies.length);
+                showBubble(randomReplies[idx]);
+                // 重置计数和触发阈值
+                clickCount = 0;
+                triggerThreshold = Math.floor(Math.random() * 8) + 3;
+            }
+            // 点击没达到阈值，不显示气泡
         });
     };
     document.body.appendChild(script);
