@@ -1,13 +1,13 @@
-<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>数据结构个人题解 | Yui's Blog</title><meta name="author" content="Yui"><meta name="copyright" content="Yui"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="目录 ¶数据结构实验 ¶第一次作业  T1 T2 T3 T4 T5 T6 T7  ¶第二次作业  T1 T2 T3 T4 T5 T6 T7  ¶数据结构课程作业 ¶第一次作业  T1 T2 T3 T4 T5 T6 T7 T8  数据结构实验 ¶第一次作业 ¶T1 ¶题目描述 新年快到了，天勤准备搞一个聚会，已经知道现有会员N人，把会员从1到N编号，其中会长的号码是N号，凡是和会长是老朋友的，那么该">
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>数据结构个人题解 | Yui's Blog</title><meta name="author" content="Yui"><meta name="copyright" content="Yui"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="目录 ¶数据结构实验 ¶第一次作业  找新朋友 互质 约瑟夫问题 进制转换 整数求和式的计算 波兰表达式 合并队列  ¶第二次作业  子串个数 模式串 主对角线上的数据和 顺时针排螺旋阵 汉诺塔游戏中的移动 树的先根遍历 树的后根遍历  ¶数据结构课程作业 ¶第一次作业  查成绩 插入成绩 二路归并 最大值个数 约瑟夫问题 括号配对 后缀表达式 字符串反转  数据结构实验 ¶第一次作业 ¶T1 ¶">
 <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta property="og:type" content="article">
 <meta property="og:title" content="数据结构个人题解">
 <meta property="og:url" content="https://bake-yui.github.io/2025/06/05/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/index.html">
 <meta property="og:site_name" content="Yui&#39;s Blog">
-<meta property="og:description" content="目录 ¶数据结构实验 ¶第一次作业  T1 T2 T3 T4 T5 T6 T7  ¶第二次作业  T1 T2 T3 T4 T5 T6 T7  ¶数据结构课程作业 ¶第一次作业  T1 T2 T3 T4 T5 T6 T7 T8  数据结构实验 ¶第一次作业 ¶T1 ¶题目描述 新年快到了，天勤准备搞一个聚会，已经知道现有会员N人，把会员从1到N编号，其中会长的号码是N号，凡是和会长是老朋友的，那么该">
+<meta property="og:description" content="目录 ¶数据结构实验 ¶第一次作业  找新朋友 互质 约瑟夫问题 进制转换 整数求和式的计算 波兰表达式 合并队列  ¶第二次作业  子串个数 模式串 主对角线上的数据和 顺时针排螺旋阵 汉诺塔游戏中的移动 树的先根遍历 树的后根遍历  ¶数据结构课程作业 ¶第一次作业  查成绩 插入成绩 二路归并 最大值个数 约瑟夫问题 括号配对 后缀表达式 字符串反转  数据结构实验 ¶第一次作业 ¶T1 ¶">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://bake-yui.github.io/image/yui.png">
 <meta property="article:published_time" content="2025-06-05T02:57:52.000Z">
-<meta property="article:modified_time" content="2025-06-10T09:07:41.213Z">
+<meta property="article:modified_time" content="2025-06-10T09:21:48.480Z">
 <meta property="article:author" content="Yui">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://bake-yui.github.io/image/yui.png"><script type="application/ld+json">{
@@ -17,7 +17,7 @@
   "url": "https://bake-yui.github.io/2025/06/05/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/",
   "image": "https://bake-yui.github.io/image/yui.png",
   "datePublished": "2025-06-05T02:57:52.000Z",
-  "dateModified": "2025-06-10T09:07:41.213Z",
+  "dateModified": "2025-06-10T09:21:48.480Z",
   "author": [
     {
       "@type": "Person",
@@ -158,39 +158,39 @@
   isHighlightShrink: false,
   isToc: true,
   pageType: 'post'
-}</script><meta name="generator" content="Hexo 7.3.0"><!-- hexo-inject:begin --><!-- hexo-inject:end --></head><body><div class="post" id="body-wrap"><header class="post-bg" id="page-header"><nav id="nav"><span id="blog-info"><a class="nav-site-title" href="/"><span class="site-name">Yui's Blog</span></a><a class="nav-page-title" href="/"><span class="site-name">数据结构个人题解</span></a></span><div id="menus"></div></nav><div id="post-info"><h1 class="post-title">数据结构个人题解</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2025-06-05T02:57:52.000Z" title="发表于 2025-06-05 10:57:52">2025-06-05</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2025-06-10T09:07:41.213Z" title="更新于 2025-06-10 17:07:41">2025-06-10</time></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-wordcount"><i class="far fa-file-word fa-fw post-meta-icon"></i><span class="post-meta-label">总字数:</span><span class="word-count">5.9k</span><span class="post-meta-separator">|</span><i class="far fa-clock fa-fw post-meta-icon"></i><span class="post-meta-label">阅读时长:</span><span>27分钟</span></span><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title=""><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">浏览量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="container post-content" id="article-container"><h1 id="%E7%9B%AE%E5%BD%95" tabindex="-1">目录</h1>
+}</script><meta name="generator" content="Hexo 7.3.0"><!-- hexo-inject:begin --><!-- hexo-inject:end --></head><body><div class="post" id="body-wrap"><header class="post-bg" id="page-header"><nav id="nav"><span id="blog-info"><a class="nav-site-title" href="/"><span class="site-name">Yui's Blog</span></a><a class="nav-page-title" href="/"><span class="site-name">数据结构个人题解</span></a></span><div id="menus"></div></nav><div id="post-info"><h1 class="post-title">数据结构个人题解</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2025-06-05T02:57:52.000Z" title="发表于 2025-06-05 10:57:52">2025-06-05</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2025-06-10T09:21:48.480Z" title="更新于 2025-06-10 17:21:48">2025-06-10</time></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-wordcount"><i class="far fa-file-word fa-fw post-meta-icon"></i><span class="post-meta-label">总字数:</span><span class="word-count">6k</span><span class="post-meta-separator">|</span><i class="far fa-clock fa-fw post-meta-icon"></i><span class="post-meta-label">阅读时长:</span><span>27分钟</span></span><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title=""><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">浏览量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="container post-content" id="article-container"><h1 id="%E7%9B%AE%E5%BD%95" tabindex="-1">目录</h1>
 <!-- hexo-inject:begin --><!-- hexo-inject:end --><h2 id="%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E5%AE%9E%E9%AA%8C" tabindex="-1" id="数据结构实验"><a class="header-anchor" href="#数据结构实验">¶</a>数据结构实验</h2>
 <h3 id="%E7%AC%AC%E4%B8%80%E6%AC%A1%E4%BD%9C%E4%B8%9A" tabindex="-1" id="第一次作业"><a class="header-anchor" href="#第一次作业">¶</a>第一次作业</h3>
 <ul>
-<li><a href="#sy-d1-t1">T1</a></li>
-<li><a href="#sy-d1-t2">T2</a></li>
-<li><a href="#sy-d1-t3">T3</a></li>
-<li><a href="#sy-d1-t4">T4</a></li>
-<li><a href="#sy-d1-t5">T5</a></li>
-<li><a href="#sy-d1-t6">T6</a></li>
-<li><a href="#sy-d1-t7">T7</a></li>
+<li><a href="#sy-d1-t1">找新朋友</a></li>
+<li><a href="#sy-d1-t2">互质</a></li>
+<li><a href="#sy-d1-t3">约瑟夫问题</a></li>
+<li><a href="#sy-d1-t4">进制转换</a></li>
+<li><a href="#sy-d1-t5">整数求和式的计算</a></li>
+<li><a href="#sy-d1-t6">波兰表达式</a></li>
+<li><a href="#sy-d1-t7">合并队列</a></li>
 </ul>
 <h3 id="%E7%AC%AC%E4%BA%8C%E6%AC%A1%E4%BD%9C%E4%B8%9A" tabindex="-1" id="第二次作业"><a class="header-anchor" href="#第二次作业">¶</a>第二次作业</h3>
 <ul>
-<li><a href="#sy-d2-t1">T1</a></li>
-<li><a href="#sy-d2-t2">T2</a></li>
-<li><a href="#sy-d2-t3">T3</a></li>
-<li><a href="#sy-d2-t4">T4</a></li>
-<li><a href="#sy-d2-t5">T5</a></li>
-<li><a href="#sy-d2-t6">T6</a></li>
-<li><a href="#sy-d2-t7">T7</a></li>
+<li><a href="#sy-d2-t1">子串个数</a></li>
+<li><a href="#sy-d2-t2">模式串</a></li>
+<li><a href="#sy-d2-t3">主对角线上的数据和</a></li>
+<li><a href="#sy-d2-t4">顺时针排螺旋阵</a></li>
+<li><a href="#sy-d2-t5">汉诺塔游戏中的移动</a></li>
+<li><a href="#sy-d2-t6">树的先根遍历</a></li>
+<li><a href="#sy-d2-t7">树的后根遍历</a></li>
 </ul>
 <h2 id="%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E8%AF%BE%E7%A8%8B%E4%BD%9C%E4%B8%9A" tabindex="-1" id="数据结构课程作业"><a class="header-anchor" href="#数据结构课程作业">¶</a>数据结构课程作业</h2>
 <h3 id="%E7%AC%AC%E4%B8%80%E6%AC%A1%E4%BD%9C%E4%B8%9A-1" tabindex="-1" id="第一次作业-2"><a class="header-anchor" href="#第一次作业-2">¶</a>第一次作业</h3>
 <ul>
-<li><a href="#ks-d1-t1">T1</a></li>
-<li><a href="#ks-d1-t2">T2</a></li>
-<li><a href="#ks-d1-t3">T3</a></li>
-<li><a href="#ks-d1-t4">T4</a></li>
-<li><a href="#ks-d1-t5">T5</a></li>
-<li><a href="#ks-d1-t6">T6</a></li>
-<li><a href="#ks-d1-t7">T7</a></li>
-<li><a href="#ks-d1-t8">T8</a></li>
+<li><a href="#ks-d1-t1">查成绩</a></li>
+<li><a href="#ks-d1-t2">插入成绩</a></li>
+<li><a href="#ks-d1-t3">二路归并</a></li>
+<li><a href="#ks-d1-t4">最大值个数</a></li>
+<li><a href="#ks-d1-t5">约瑟夫问题</a></li>
+<li><a href="#ks-d1-t6">括号配对</a></li>
+<li><a href="#ks-d1-t7">后缀表达式</a></li>
+<li><a href="#ks-d1-t8">字符串反转</a></li>
 </ul>
 <h1 id="%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E5%AE%9E%E9%AA%8C-1" tabindex="-1">数据结构实验</h1>
 <h2 id="%E7%AC%AC%E4%B8%80%E6%AC%A1%E4%BD%9C%E4%B8%9A-2" tabindex="-1" id="第一次作业-3"><a class="header-anchor" href="#第一次作业-3">¶</a>第一次作业</h2>
